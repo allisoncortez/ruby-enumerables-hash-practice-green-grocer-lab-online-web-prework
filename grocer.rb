@@ -72,7 +72,7 @@ def checkout(cart, coupons)
   #now, evaluate the total
   total = applied_discountoncoupons.reduce(0) {|acc, (key, value)| acc += value[:price] * value[:count]}
   
-  #apply an additional discount is customer spends $100 or more(using ternary expression)
+  #apply an additional discount is customer spends $100 or more(using ternary operator)
   total > 100 ? total * 0.9 : total
   
 end
