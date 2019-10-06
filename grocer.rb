@@ -67,10 +67,10 @@ def checkout(cart, coupons)
   #first, consolidate cart
   hash_cart = consolidate_cart(cart)
   applied_coupons = apply_coupons(hash_cart, coupons)
-  applied_discountondiscount = apply_clearance(applied_coupons)
+  applied_discountoncoupons = apply_clearance(applied_coupons)
   
   #now, evaluate the total
-  total = applied_discountondiscount.reduce(0) {|acc, (key, value)| acc += value[:price] * value[:count]}
+  total = applied_discountoncoupons.reduce(0) {|acc, (key, value)| acc += value[:price] * value[:count]}
   
   #apply an additional discount is customer spends $100 or more(using ternary expression)
   total > 100 ? total * 0.9 : total
