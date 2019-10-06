@@ -71,4 +71,5 @@ def checkout(cart, coupons)
   
   #now, evaluate the total
   
+  
 end
