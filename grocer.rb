@@ -70,6 +70,6 @@ def checkout(cart, coupons)
   applied_discountondiscount = apply_clearance(applied_coupons)
   
   #now, evaluate the total
-  total = applied_discountondiscount.reduce(0) {|acc, {key, value}|}
+  total = applied_discountondiscount.reduce(0) {|acc, (key, value)|}
   
 end
