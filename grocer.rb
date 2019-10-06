@@ -48,6 +48,7 @@ def apply_coupons(cart, coupons)
       elsif cart[item][:count] >= coupon[:num] && cart.has_key?("#{item} W/COUPON")
         cart["#{item} W/COUPON"][:count] += coupon[:num]
         cart[item][:count] -= coupon[:num]
+        
     end
   end
 end
@@ -59,7 +60,10 @@ end
 
 
 def apply_clearance(cart)
-  
+  cart.each do |product_name, stats|
+    
+  end
+  cart
 end
 
 def checkout(cart, coupons)
