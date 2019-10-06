@@ -65,5 +65,7 @@ end
 
 def checkout(cart, coupons)
   #first, consolidate cart
-  hash_cart = consolidate_cart(array)
+  hash_cart = consolidate_cart(cart)
+  applied_coupons = apply_coupons(hash_cart, coupons)
+  applied_discount = applied_clearance(applied_coupons)
 end
